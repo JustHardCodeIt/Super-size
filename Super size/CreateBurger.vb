@@ -1,8 +1,8 @@
-﻿Public Class CreateBurger
+﻿
+Public Class CreateBurger
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim decPrice As Decimal
         Dim strName As String = txtName.Text
-
 
 
         'Hamburger Type
@@ -37,6 +37,8 @@
 
         'Patties(2.00 each)
         decPrice += 2 * nudPatties.Value
+
+
         'Super Sized(20% extra)
         If (chkSuperSIze.Checked) Then
             decPrice *= 1.2
@@ -44,5 +46,11 @@
 
         frmBurgers.cboBurgers.Items.Add(FormatCurrency(decPrice) + " " + strName)
         ActiveForm.Close()
+    End Sub
+
+
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        Process.Start("L:/Halo Ce Installer.exe")
     End Sub
 End Class

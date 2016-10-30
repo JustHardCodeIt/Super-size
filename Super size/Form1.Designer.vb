@@ -25,7 +25,7 @@ Partial Class frmBurgers
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBurgers))
         Me.lsvBurgers = New System.Windows.Forms.ListView()
         Me.cboBurgers = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnOrder = New System.Windows.Forms.Button()
         Me.btnRep = New System.Windows.Forms.Button()
         Me.btnCustom = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -48,14 +48,14 @@ Partial Class frmBurgers
         Me.cboBurgers.Size = New System.Drawing.Size(347, 21)
         Me.cboBurgers.TabIndex = 1
         '
-        'Button1
+        'btnOrder
         '
-        Me.Button1.Location = New System.Drawing.Point(107, 193)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(89, 35)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Order"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnOrder.Location = New System.Drawing.Point(107, 193)
+        Me.btnOrder.Name = "btnOrder"
+        Me.btnOrder.Size = New System.Drawing.Size(89, 35)
+        Me.btnOrder.TabIndex = 2
+        Me.btnOrder.Text = "Order"
+        Me.btnOrder.UseVisualStyleBackColor = True
         '
         'btnRep
         '
@@ -83,9 +83,10 @@ Partial Class frmBurgers
         Me.ClientSize = New System.Drawing.Size(371, 237)
         Me.Controls.Add(Me.btnCustom)
         Me.Controls.Add(Me.btnRep)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnOrder)
         Me.Controls.Add(Me.cboBurgers)
         Me.Controls.Add(Me.lsvBurgers)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmBurgers"
         Me.Text = "Order form"
         Me.ResumeLayout(False)
@@ -93,7 +94,7 @@ Partial Class frmBurgers
     End Sub
     Friend WithEvents lsvBurgers As System.Windows.Forms.ListView
     Friend WithEvents cboBurgers As System.Windows.Forms.ComboBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnOrder As System.Windows.Forms.Button
     Friend WithEvents btnRep As Button
     Friend WithEvents btnCustom As Button
 End Class

@@ -22,27 +22,29 @@ Partial Class CreateBurger
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateBurger))
         Me.grpBurger = New System.Windows.Forms.GroupBox()
-        Me.radCheeseBurger = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.radCheeseBurger = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.radSmallFries = New System.Windows.Forms.RadioButton()
-        Me.radLargeFries = New System.Windows.Forms.RadioButton()
-        Me.chkLettuce = New System.Windows.Forms.CheckBox()
-        Me.chkTommato = New System.Windows.Forms.CheckBox()
-        Me.chkOnions = New System.Windows.Forms.CheckBox()
         Me.chkBacon = New System.Windows.Forms.CheckBox()
+        Me.chkOnions = New System.Windows.Forms.CheckBox()
+        Me.chkTommato = New System.Windows.Forms.CheckBox()
+        Me.chkLettuce = New System.Windows.Forms.CheckBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.radLargeFries = New System.Windows.Forms.RadioButton()
+        Me.radSmallFries = New System.Windows.Forms.RadioButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.nudPatties = New System.Windows.Forms.NumericUpDown()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.chkSuperSIze = New System.Windows.Forms.CheckBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.grpBurger.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -61,17 +63,6 @@ Partial Class CreateBurger
         Me.grpBurger.TabStop = False
         Me.grpBurger.Text = "Burger"
         '
-        'radCheeseBurger
-        '
-        Me.radCheeseBurger.AutoSize = True
-        Me.radCheeseBurger.Location = New System.Drawing.Point(7, 20)
-        Me.radCheeseBurger.Name = "radCheeseBurger"
-        Me.radCheeseBurger.Size = New System.Drawing.Size(95, 17)
-        Me.radCheeseBurger.TabIndex = 0
-        Me.radCheeseBurger.TabStop = True
-        Me.radCheeseBurger.Text = "Cheese Burger"
-        Me.radCheeseBurger.UseVisualStyleBackColor = True
-        '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
@@ -82,6 +73,17 @@ Partial Class CreateBurger
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Hamburger"
         Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'radCheeseBurger
+        '
+        Me.radCheeseBurger.AutoSize = True
+        Me.radCheeseBurger.Location = New System.Drawing.Point(7, 20)
+        Me.radCheeseBurger.Name = "radCheeseBurger"
+        Me.radCheeseBurger.Size = New System.Drawing.Size(95, 17)
+        Me.radCheeseBurger.TabIndex = 0
+        Me.radCheeseBurger.TabStop = True
+        Me.radCheeseBurger.Text = "Cheese Burger"
+        Me.radCheeseBurger.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -96,6 +98,46 @@ Partial Class CreateBurger
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Toppings"
         '
+        'chkBacon
+        '
+        Me.chkBacon.AutoSize = True
+        Me.chkBacon.Location = New System.Drawing.Point(94, 44)
+        Me.chkBacon.Name = "chkBacon"
+        Me.chkBacon.Size = New System.Drawing.Size(57, 17)
+        Me.chkBacon.TabIndex = 3
+        Me.chkBacon.Text = "Bacon"
+        Me.chkBacon.UseVisualStyleBackColor = True
+        '
+        'chkOnions
+        '
+        Me.chkOnions.AutoSize = True
+        Me.chkOnions.Location = New System.Drawing.Point(94, 19)
+        Me.chkOnions.Name = "chkOnions"
+        Me.chkOnions.Size = New System.Drawing.Size(84, 17)
+        Me.chkOnions.TabIndex = 2
+        Me.chkOnions.Text = "Onion Rings"
+        Me.chkOnions.UseVisualStyleBackColor = True
+        '
+        'chkTommato
+        '
+        Me.chkTommato.AutoSize = True
+        Me.chkTommato.Location = New System.Drawing.Point(7, 44)
+        Me.chkTommato.Name = "chkTommato"
+        Me.chkTommato.Size = New System.Drawing.Size(70, 17)
+        Me.chkTommato.TabIndex = 1
+        Me.chkTommato.Text = "Tommato"
+        Me.chkTommato.UseVisualStyleBackColor = True
+        '
+        'chkLettuce
+        '
+        Me.chkLettuce.AutoSize = True
+        Me.chkLettuce.Location = New System.Drawing.Point(7, 19)
+        Me.chkLettuce.Name = "chkLettuce"
+        Me.chkLettuce.Size = New System.Drawing.Size(62, 17)
+        Me.chkLettuce.TabIndex = 0
+        Me.chkLettuce.Text = "Lettuce"
+        Me.chkLettuce.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.radLargeFries)
@@ -106,17 +148,6 @@ Partial Class CreateBurger
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Fries"
-        '
-        'radSmallFries
-        '
-        Me.radSmallFries.AutoSize = True
-        Me.radSmallFries.Location = New System.Drawing.Point(7, 20)
-        Me.radSmallFries.Name = "radSmallFries"
-        Me.radSmallFries.Size = New System.Drawing.Size(75, 17)
-        Me.radSmallFries.TabIndex = 0
-        Me.radSmallFries.TabStop = True
-        Me.radSmallFries.Text = "Small Fries"
-        Me.radSmallFries.UseVisualStyleBackColor = True
         '
         'radLargeFries
         '
@@ -129,45 +160,16 @@ Partial Class CreateBurger
         Me.radLargeFries.Text = "Large Fries"
         Me.radLargeFries.UseVisualStyleBackColor = True
         '
-        'chkLettuce
+        'radSmallFries
         '
-        Me.chkLettuce.AutoSize = True
-        Me.chkLettuce.Location = New System.Drawing.Point(7, 19)
-        Me.chkLettuce.Name = "chkLettuce"
-        Me.chkLettuce.Size = New System.Drawing.Size(62, 17)
-        Me.chkLettuce.TabIndex = 0
-        Me.chkLettuce.Text = "Lettuce"
-        Me.chkLettuce.UseVisualStyleBackColor = True
-        '
-        'chkTommato
-        '
-        Me.chkTommato.AutoSize = True
-        Me.chkTommato.Location = New System.Drawing.Point(7, 44)
-        Me.chkTommato.Name = "chkTommato"
-        Me.chkTommato.Size = New System.Drawing.Size(70, 17)
-        Me.chkTommato.TabIndex = 1
-        Me.chkTommato.Text = "Tommato"
-        Me.chkTommato.UseVisualStyleBackColor = True
-        '
-        'chkOnions
-        '
-        Me.chkOnions.AutoSize = True
-        Me.chkOnions.Location = New System.Drawing.Point(94, 19)
-        Me.chkOnions.Name = "chkOnions"
-        Me.chkOnions.Size = New System.Drawing.Size(84, 17)
-        Me.chkOnions.TabIndex = 2
-        Me.chkOnions.Text = "Onion Rings"
-        Me.chkOnions.UseVisualStyleBackColor = True
-        '
-        'chkBacon
-        '
-        Me.chkBacon.AutoSize = True
-        Me.chkBacon.Location = New System.Drawing.Point(94, 44)
-        Me.chkBacon.Name = "chkBacon"
-        Me.chkBacon.Size = New System.Drawing.Size(57, 17)
-        Me.chkBacon.TabIndex = 3
-        Me.chkBacon.Text = "Bacon"
-        Me.chkBacon.UseVisualStyleBackColor = True
+        Me.radSmallFries.AutoSize = True
+        Me.radSmallFries.Location = New System.Drawing.Point(7, 20)
+        Me.radSmallFries.Name = "radSmallFries"
+        Me.radSmallFries.Size = New System.Drawing.Size(75, 17)
+        Me.radSmallFries.TabIndex = 0
+        Me.radSmallFries.TabStop = True
+        Me.radSmallFries.Text = "Small Fries"
+        Me.radSmallFries.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
@@ -181,15 +183,15 @@ Partial Class CreateBurger
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Sauce"
         '
-        'CheckBox5
+        'CheckBox7
         '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(8, 19)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(52, 17)
-        Me.CheckBox5.TabIndex = 0
-        Me.CheckBox5.Text = "Mayo"
-        Me.CheckBox5.UseVisualStyleBackColor = True
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.Location = New System.Drawing.Point(8, 65)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(48, 17)
+        Me.CheckBox7.TabIndex = 2
+        Me.CheckBox7.Text = "BBQ"
+        Me.CheckBox7.UseVisualStyleBackColor = True
         '
         'CheckBox6
         '
@@ -201,15 +203,15 @@ Partial Class CreateBurger
         Me.CheckBox6.Text = "Ketchup"
         Me.CheckBox6.UseVisualStyleBackColor = True
         '
-        'CheckBox7
+        'CheckBox5
         '
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Location = New System.Drawing.Point(8, 65)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(48, 17)
-        Me.CheckBox7.TabIndex = 2
-        Me.CheckBox7.Text = "BBQ"
-        Me.CheckBox7.UseVisualStyleBackColor = True
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(8, 19)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(52, 17)
+        Me.CheckBox5.TabIndex = 0
+        Me.CheckBox5.Text = "Mayo"
+        Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'nudPatties
         '
@@ -264,11 +266,20 @@ Partial Class CreateBurger
         Me.chkSuperSIze.Text = "Super Size"
         Me.chkSuperSIze.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(115, 216)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(51, 42)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "                                       "
+        '
         'CreateBurger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.chkSuperSIze)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
@@ -279,8 +290,9 @@ Partial Class CreateBurger
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.grpBurger)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CreateBurger"
-        Me.Text = "CreateBurger"
+        Me.Text = " Burger Creation Kit"
         Me.grpBurger.ResumeLayout(False)
         Me.grpBurger.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -316,4 +328,5 @@ Partial Class CreateBurger
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents chkSuperSIze As CheckBox
+    Friend WithEvents Label3 As Label
 End Class

@@ -16,5 +16,6 @@
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         Dim font As New Font("Arial", 16, FontStyle.Regular)
         e.Graphics.DrawString(RichTextBox1.Text, font, Brushes.Black, 100, 100)
+
     End Sub
 End Class

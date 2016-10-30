@@ -1,14 +1,17 @@
-﻿Public Class frmBurgers
+﻿'Name:    Super Size
+'Purpose: Order Burgers
+'Cretaed: 10/30/16
+Public Class frmBurgers
     Dim decTotal As Decimal
     Dim decTax As Decimal
-    Const TaxRate As Decimal = 0.07
+    Const decTAXRATE As Decimal = 0.07
 
     Private Sub frmBurgers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lsvBurgers.Columns.Add("Item", 200, HorizontalAlignment.Left)
         lsvBurgers.Columns.Add("Price", 50, HorizontalAlignment.Left)
         lsvBurgers.Columns.Add("Order Number", 90, HorizontalAlignment.Left)
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
 
         Static intOrder As Integer
         intOrder += 1
@@ -24,17 +27,17 @@
     End Sub
 
     Function GetPrice()
-        Dim Price As String = Nothing
+        Dim intPrice As String = Nothing
         If IsNumeric(cboBurgers.Text(5)) Then
             For i = 0 To 4
-                Price += cboBurgers.Text(i)
+                intPrice += cboBurgers.Text(i)
             Next
-            Return Price
+            Return intPrice
         Else
             For i = 0 To 3
-                Price += cboBurgers.Text(i)
+                intPrice += cboBurgers.Text(i)
             Next
-            Return Price
+            Return intPrice
         End If
     End Function
 
@@ -47,14 +50,21 @@
         Dim frmRecipet As New Form
         frmRecipet = Reciept
         frmRecipet.Show()
+        Reciept.RichTextBox1.Text += vbCrLf
         For Each item As ListViewItem In Me.lsvBurgers.Items
-            Reciept.RichTextBox1.Text += vbCrLf + item.Text
+            If Reciept.RichTextBox1.Text(0) = "$" Then
+                Reciept.RichTextBox1.Text += vbCrLf + item.Text
+            Else
+                Reciept.RichTextBox1.Text += vbCrLf + "$" + item.Text
+            End If
         Next
+
+        Reciept.RichTextBox1.Text += "---------------------------------------------------------------"
         Reciept.RichTextBox1.Text += vbCrLf + "Total: " + FormatCurrency(decTotal)
-        Reciept.RichTextBox1.Text += vbCrLf + "Tax: " + FormatCurrency(decTotal * TaxRate)
-        Reciept.RichTextBox1.Text += vbCrLf + "Grand Total: " + FormatCurrency(decTotal + (decTotal * TaxRate))
+        Reciept.RichTextBox1.Text += vbCrLf + "Tax: " + FormatCurrency(decTotal * decTAXRATE)
+        Reciept.RichTextBox1.Text += vbCrLf + "Grand Total: " + FormatCurrency(decTotal + (decTotal * decTAXRATE))
 
-
+        Reciept.RichTextBox1.Text += vbCrLf + "---------------------------------------------------------------"
         Reciept.RichTextBox1.Text += vbCrLf + "Date: " + Today
         Reciept.RichTextBox1.Text += vbCrLf + "Thanks Come again!"
     End Sub
